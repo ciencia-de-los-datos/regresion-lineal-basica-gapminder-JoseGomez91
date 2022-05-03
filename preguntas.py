@@ -29,10 +29,10 @@ def pregunta_01():
     print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
-    y_reshaped = np.array(y).reshape(139, 1)
+    y_reshaped = np.array(y).reshape(len(y), 1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    X_reshaped = np.array(X).reshape(139, 1)
+    X_reshaped = np.array(X).reshape(len(X), 1)
 
     # Imprima las nuevas dimensiones de `y`
     print(y_reshaped.shape)
@@ -48,23 +48,23 @@ def pregunta_02():
     """
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = ____
+    df = pd.read_csv('gm_2008_region.csv', sep=',')
 
     # Imprima las dimensiones del DataFrame
-    print(____.____)
+    print(df.shape)
 
     # Imprima la correlación entre las columnas `life` y `fertility` con 4 decimales.
-    print(____)
+    print(round((np.corrcoef(df['life'], df['fertility']))[0][1],4))
 
     # Imprima la media de la columna `life` con 4 decimales.
-    print(____)
+    print(round(np.mean(df['life']),4))
 
     # Imprima el tipo de dato de la columna `fertility`.
-    print(____)
+    print(type(df['fertility']))
 
     # Imprima la correlación entre las columnas `GDP` y `life` con 4 decimales.
-    print(____)
-
+    print(round((np.corrcoef(df['GDP'], df['life']))[0][1],4))
+print(pregunta_02())
 
 def pregunta_03():
     """
