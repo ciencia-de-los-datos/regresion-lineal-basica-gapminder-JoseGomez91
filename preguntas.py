@@ -64,7 +64,7 @@ def pregunta_02():
 
     # Imprima la correlación entre las columnas `GDP` y `life` con 4 decimales.
     print(round((np.corrcoef(df['GDP'], df['life']))[0][1],4))
-print(pregunta_02())
+#print(pregunta_02())
 
 def pregunta_03():
     """
